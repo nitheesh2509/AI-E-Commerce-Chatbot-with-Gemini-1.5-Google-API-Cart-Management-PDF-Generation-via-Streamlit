@@ -82,12 +82,25 @@ All required packages are listed in the `requirements.txt` file.
 
 ## Screenshots
 
+### E-Commerce App
 ![E-Commerce App](images/store_app_1.png)
+
+### E-Commerce UI
 ![E-Commerce UI](images/store_app_2.png)
+
+### Chatbot - Add to Cart
 ![Chatbot - Add to Cart](images/add_to_cart.png)
+
+### Chatbot - Remove a Unit of Quantity from Products in Cart
 ![Chatbot - Remove a Unit of Quantity from Products in Cart](images/remove_a_unit_from_cart.png)
+
+### Chatbot - Show Cart
 ![Chatbot - Show Cart](images/show_cart.png)
+
+### Chatbot - Delete Product
 ![Chatbot - Delete Product](images/delete_cart_item.png)
+
+### PDF Generation
 ![PDF Generation](images/Pdf_generation.png)
 
 
