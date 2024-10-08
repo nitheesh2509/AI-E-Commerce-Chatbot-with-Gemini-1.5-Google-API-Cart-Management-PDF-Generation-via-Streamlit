@@ -111,4 +111,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Developed by [Nitheeshkumar R]**
+**Developed by © [Nitheeshkumar R]**
