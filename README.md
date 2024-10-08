@@ -58,6 +58,14 @@ This project is an advanced AI-powered E-commerce chatbot designed to assist use
    cd https://github.com/nitheesh2509/AI-E-Commerce-Chatbot-with-Gemini-1.5-Google-API-Cart-Management-PDF-Generation-via-Streamlit.git
    ```
 
+3. Create a .env file:
+Inside your project directory, create a file named .env and add the necessary environment variables. 
+For example:
+   '''bash
+   API_KEY=your_gemini_api_key_here
+   '''
+
+
 3. Install the dependencies:
 
    ```bash

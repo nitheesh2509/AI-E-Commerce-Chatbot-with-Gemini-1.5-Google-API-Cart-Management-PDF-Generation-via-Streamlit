@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 from fpdf import FPDF
 
+import google.generativeai as genai  # Make sure you have the Gemini API installed and set up
+
+# Initialize the Gemini model
+model = genai.GenerativeModel("gemini-1.5-flash")
+
 # Sample product data
 products = [
     {"name": "Apple iPhone 14", "price": 999, "description": "6.1-inch display, 128GB, 12MP dual camera", 
@@ -69,12 +74,28 @@ for idx, product in enumerate(products):
                 st.session_state.cart[product["name"]] = 1
             st.success(f"Added {product['name']} to your cart!")
 
-# Chatbot response handling
+
 def get_chatbot_response(user_message):
     user_message = user_message.lower().strip()
 
+    # Greeting response
     if "hi" in user_message or "hello" in user_message:
-        return "Hello! I'm here to help you with your shopping."
+        return "Hi there! How can I assist you with your shopping today?"
+
+    # Check if the user is looking for a new phone or mentions a damaged mobile
+    if "looking for new phone" in user_message or "my mobile is damaged" in user_message:
+        gemini_response = model.generate_content(
+            "I'm looking for a new phone because my current one is damaged. What should I say?",
+            generation_config=genai.types.GenerationConfig(
+                max_output_tokens=150,
+                temperature=0.7,
+            )
+        )
+        response = gemini_response.text
+
+        # Show available products
+        product_list = "\n".join([f"- {product['name']} for ${product['price']}" for product in products])
+        return f"{response}\n\nHere are some options you might consider:\n{product_list}"
 
     # Add products to cart
     for product in products:
@@ -86,7 +107,7 @@ def get_chatbot_response(user_message):
                 if word.isdigit():
                     quantity = int(word)  # Get the quantity if specified
                     break
-            
+
             st.session_state.cart[product["name"]] = st.session_state.cart.get(product["name"], 0) + quantity
             return f"Added {quantity} unit(s) of {product['name']} to your cart."
 
@@ -149,7 +170,6 @@ def get_chatbot_response(user_message):
             return "Your cart is empty. Please add items to your cart before proceeding."
 
     return "I'm not sure how to respond to that. Can you ask something else?"
-
 
 # Function to generate a PDF and provide download link
 def generate_pdf(order_df, total_price):
