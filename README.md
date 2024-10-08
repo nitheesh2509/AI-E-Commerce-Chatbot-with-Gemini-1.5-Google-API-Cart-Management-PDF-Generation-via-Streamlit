@@ -96,6 +96,9 @@ All required packages are listed in the `requirements.txt` file.
 ### E-Commerce UI
 ![E-Commerce UI](images/store_app_2.png)
 
+### Gemini- Chatbot Interaction
+![E-Commerce UI](images/Chat_interaction.png)
+
 ### Chatbot - Add to Cart
 ![Chatbot - Add to Cart](images/add_to_cart.png)
 
