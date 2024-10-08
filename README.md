@@ -84,11 +84,12 @@ All required packages are listed in the `requirements.txt` file.
 
 ![E-Commerce App](images/store_app1.png)
 ![E-Commerce UI](images/store_app1.png)
-![Chatbot-Add to cart](images/add_to_cart.png)
-![Chatbot-Remove a unit of quantity from products in cart](images/remove_a_unit_from_cart.png)
-![Chatbot-Show cart](images/show_cart.png)
-![Chatbot-Delete Product](images/delete_cart_item.png)
+![Chatbot - Add to Cart](images/add_to_cart.png)
+![Chatbot - Remove a Unit of Quantity from Products in Cart](images/remove_a_unit_from_cart.png)
+![Chatbot - Show Cart](images/show_cart.png)
+![Chatbot - Delete Product](images/delete_cart_item.png)
 ![PDF Generation](images/Pdf_generation.png)
+
 
 
 ## License
