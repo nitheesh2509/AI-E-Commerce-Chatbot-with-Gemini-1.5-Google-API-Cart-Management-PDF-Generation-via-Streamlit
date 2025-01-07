@@ -1,4 +1,4 @@
-fpdf
+fpdf2
 streamlit
 pandas
 python-dotenv
