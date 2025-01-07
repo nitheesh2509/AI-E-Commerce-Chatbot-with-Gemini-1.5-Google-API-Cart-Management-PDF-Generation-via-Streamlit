@@ -1,8 +1,8 @@
+fpdf
 streamlit
 pandas
 python-dotenv
 requests
 Pillow
 pandas
-fpdf==1.7
 google-generativeai
