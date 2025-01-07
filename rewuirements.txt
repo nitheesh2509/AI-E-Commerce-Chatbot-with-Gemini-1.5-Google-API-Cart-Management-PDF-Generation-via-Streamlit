@@ -4,5 +4,5 @@ python-dotenv==1.0.0
 requests==2.28.2
 Pillow==9.3.0
 pandas==2.0.3
-fpdf
+fpdf==1.7.2
 google-generativeai==0.1.0  # Replace with the actual version you're using if different
