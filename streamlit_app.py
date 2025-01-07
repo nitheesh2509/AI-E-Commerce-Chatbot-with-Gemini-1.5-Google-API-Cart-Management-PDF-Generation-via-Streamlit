@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from fpdf2 import FPDF
+from fpdf import FPDF
 
 import google.generativeai as genai  # Make sure you have the Gemini API installed and set up
 
